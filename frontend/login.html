@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>Sephora Review Website</title>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+    </head>
+    <script>
+        var response = "";
+
+        function login(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            console.log("Login function triggered"); // Track when the login function is called
+
+            var credentials = {
+                author_un: document.getElementById("author_un").value,
+                password: document.getElementById('password').value
+            };
+
+            console.log("Credentials:", credentials); // Log the entered credentials
+
+            var request = new XMLHttpRequest();
+
+            request.open("POST", "/login", true);
+            request.setRequestHeader("Content-Type", "application/json");
+
+            request.onload = function() {
+                console.log("Request loaded"); // Track when the request completes
+
+                response = JSON.parse(request.responseText);
+                console.log("Response:", response); // Log the response from the server
+
+                if (response.message == "SUCCESS!") {
+                    console.log("Login successful"); // Log success status
+                    alert("Success");
+                    sessionStorage.setItem("author_un", credentials.author_un);
+                    sessionStorage.setItem("user_id", response.author_id); // Fixed to match server response key
+                    window.location = "index_loggedin.html";
+                } else {
+                    console.log("Login failed"); // Log failure status
+                    alert("FAIL!");
+                }
+            };
+
+            request.onerror = function() {
+                console.log("Error with the request"); // Track request errors
+            };
+
+            request.send(JSON.stringify(credentials));
+            console.log("Request sent"); // Log when the request is sent
+        }
+    </script>
+    <body>
+        <div class="loginbox">
+            <img src="images/i_user.png" class="avatar">
+            <h1>Login</h1>
+            <form onsubmit="login(event)"> <!-- Added event handler to prevent default form submission -->
+                <input type="text" id="author_un" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button> <!-- Removed redundant attributes -->
+                <p><a href="signup.html">Don't Have An Account?</a></p> <!-- Fixed missing closing tag -->
+            </form>
+        </div>
+    </body>
+</html>

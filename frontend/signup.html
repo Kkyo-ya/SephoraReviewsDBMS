@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Sephora Review Website</title>
+        <link rel="stylesheet" type="text/css" href="css/signup.css">
+        <script>
+            function signup(){
+                var newUser = new Object();
+                
+
+                newUser.author_un = document.getElementById("author_un").value;
+                newUser.password = document.getElementById("password").value;
+                newUser.skin_tone = document.getElementById("skin_tone").value;
+                newUser.skin_type = document.getElementById("skin_type").value;
+
+                var request = new XMLHttpRequest();
+
+                request.open("POST", "/account", true);
+                request.setRequestHeader("Content-Type", "application/json");
+                request.onload = function() {
+                    response = JSON.parse(request.responseText);
+                    
+                    if(response.affectedRows == "1"){
+                        alert("SUCCESS! You may now login.")
+                        window.location = "login.html";
+                    }
+                    else{
+                        alert("FAIL!")
+                    }
+                };
+
+                request.send(JSON.stringify(newUser));
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div class="signupbox">
+            <h1>Sign Up</h1>
+            <form>
+                <input type="text" name="" placeholder="Username" id="author_un">
+                <input type="text" name="" placeholder="Password" id="password">
+                <input type="text" name="" placeholder="Skin Tone" id="skin_tone">
+                <input type="text" name="" placeholder="Skin Type" id="skin_type">
+                <button type="submit" value="Login" name="" onclick="signup()">Sign Up</button>
+                <a href="login.html">Already Have An Account?</a>
+            </form>
+        </div>
+    </body>
+</html>

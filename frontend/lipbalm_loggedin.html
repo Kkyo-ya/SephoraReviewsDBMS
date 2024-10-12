@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Sephora Review Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/cuisine_korean.css">
+        <link rel="stylesheet" href="css/cards.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css/css?family=Karla">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="js/nav_bar.js"></script>
+        <script src="js/myscript.js"></script>
+    </head>
+    <style>
+      .checked{
+        color: orange;
+      }
+      .card{
+        height: 260px;
+      }
+      .card img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 150px;
+      }
+      h5{
+          padding-top: 10px;
+          padding-right: 8px;
+          color: white;
+      }
+    </style>
+    <script>
+    function getAuthor_un(){
+        document.getElementById("author_un").innerHTML = sessionStorage.getItem("author_un");
+    }
+    </script>
+    <body onload="getAuthor_un(); listBreakfast();">
+    <div class="navbar">
+        <a href="allProductsin.html">All Products
+      
+        <!--<div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Quick Search
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="restaurant_breakfast_loggdin.html" style="background-color: grey;">Breakfast</a>
+          <a href="restaurant_lunch_loggedin.html">Lunch</a>
+          <a href="restaurant_dinz_loggedin.html">Dinner</a>
+          <a href="restaurant_cafe_loggedin.html">Cafes</a>
+          <a href="restaurant_night_loggedin.html">Nightlife</a>
+          <a href="restaurant_dessert_loggedin.html">Dessert</a>
+          <a href="restaurant_taway_loggedin.html">Takeaway</a>
+        </div>
+        </div>--> 
+      
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction2()">Product Categories
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown2">
+          <a href="lipbalm_loggedin.html">Lip Balms</a>
+          <a href="moisturizer.html">Moisturzer</a>
+          <a href="treatment.html">Treatment</a>
+          <a href="sunscreen.html">Sunscreen</a>
+          <a href="mask.html">Mask</a>
+          <a href="cleanser.html">Cleanser</a>
+          <a href="giftset.html">Value Gift Set</a>
+	  <a href="minisize.html">Mini Size</a>
+        </div>
+        </div>
+      
+        
+
+        <div class="topnav-right">
+          <div class="dropdown">
+                  <button class="dropbtn" onclick="myFunction4()" href="#" id="author_un">
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="myDropdown4">
+                      <a href="index.html">Log Out</a>
+                  </div>
+              </div>
+          </div>
+
+    <center>
+    	  <!--<a href="index.html">-->
+		<h2 class="location"><b>Sephora Product Review Site</b></h2>
+	  <!--</a>-->
+    </center>
+
+    </div>
+
+    <center>
+        <h3 class="location"><b>Lip Balms</b></h3>
+    <center>
+
+  <br>
+      <div class="row" id="RestaurantList">
+        
+      </div>
+    <br>
+    <br>
+    </body>
+
+    <div class="row">
+      <div class="col-lg" style="background-color:grey; color: white;">Database Systems - Project 1; Team 27
+  </div> 
+
+</html>
