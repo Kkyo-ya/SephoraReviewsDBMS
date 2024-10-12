@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+/* Login Box */
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #ffbfef;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 5%;
+    padding: 70px 30px;
+}
+
+/* User Icon */
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+/* Login Heading */
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Input Box for username / password */
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Input Text */
+.loginbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Style Submit/Login Button */
+.loginbox button[type="submit"]{
+    width: 250px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: white;
+    color: #ff4fd3;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+/* When cursor hovers over login button */
+.loginbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+/* Don't have an account? */
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: blue;
+}
+
+/* when cursor hovers over abv */
+.loginbox a:hover{
+    color: white;
+}
+
+

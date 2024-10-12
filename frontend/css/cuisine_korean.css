@@ -1,0 +1,149 @@
+/* Navigation Bar */
+.navbar {
+    /* overflow: hidden; */
+    background-color: #ffbfef;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  
+.dropdown {
+    float: left;
+}
+  
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+ 
+/* When hovering over an element in nav bar */
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: #ff4fd3;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Hover over content in dropdown */
+.dropdown-content a:hover {
+    background-color: #ff4fd3;
+}
+  
+.show {
+    float: right;
+    width: 300px;
+    padding: 10px;
+}
+
+/* Search */
+.topnav input[type=text] {
+    float: right;
+    padding: 1000px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 1000px;
+    font-size: 17px;
+}
+
+/* Login / Sign Up */
+.topnav-right {
+    float: right;
+}
+
+.navbar .search-container {
+    float: right;
+}
+  
+.navbar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+/* Search Box */
+.navbar .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+  
+.navbar .search-container button:hover {
+    background: #ccc;
+}
+  
+@media screen and (max-width: 600px) {
+    .navbar .search-container {
+        float: none;
+    }
+    .navbar a, .navbar input[type=text], .navbar .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .navbar input[type=text] {
+        border: 1px solid #ccc;  
+    }
+}
+
+/* Cuisine Header */
+.cuisine{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 750;
+}
+
+/* Filter Button */
+/* .modal-body button{
+    background-color: orange;
+    border-radius: 15px;
+} */
+
+/* Restaurant Images */
+/* .row img{
+    padding: 5px;
+    margin-left: 7px;
+    border-radius: 15px;
+} */
+
+/* Restaurant Names */
+/* .row h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+} */

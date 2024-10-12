@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+/* Signup Box */
+.signupbox{
+    width: 320px;
+    height: 520px;
+    background: #ffbfef;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 5%;
+    padding: 70px 30px;
+}
+
+/* Sign Up Heading */
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Input Boxes */
+.signupbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Input Text */
+.signupbox input[type="text"], input[type="password"]{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Style Submit/Signup Button */
+.signupbox button[type="submit"]{
+    width: 250px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: white;
+    color: #ff4fd3;
+    font-size: 18px;
+    border-radius: 20px;
+}
+
+/* When cursor hovers over signup button */
+.signupbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+
+/* already have an account? */
+.signupbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: blue;
+}
+
+/* when cursor hovers over abv */
+.signupbox a:hover{
+    color: white;
+}
